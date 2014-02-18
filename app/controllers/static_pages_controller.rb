@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def help
+  	contents = File.read(Rails.root.join('README.md'))
+  	renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  	@rendered_readme = renderer.render(contents)
   end
 
   def about
