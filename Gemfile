@@ -23,6 +23,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'bootstrap-sass'
+gem 'hirb'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -35,7 +37,7 @@ group :production do
 end
 
 # gem 'page_viewer'
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# 
 # gem 'unicorn'
 # gem 'capistrano', group: :development
 # gem 'debugger', group: [:development, :test]
