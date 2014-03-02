@@ -1,3 +1,23 @@
 <% provide(:title, 'Sign Up') %>
 <h1>Crazy Experiences. Every day.</h1>
-<p>This is a place to learn and grow. If you want to be part of a coding revolution, sign in and come join.</p>
+
+<div class="row">
+  <div class="col-md-6 col-lg-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-default btn-lg btn-primary" %>
+    <% end %>
+  </div>
+</div>
